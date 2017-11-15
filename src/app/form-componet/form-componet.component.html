@@ -1,0 +1,18 @@
+<div class="field content-container">
+  <div class="control has-icons-left has-icons-right content-item">
+    <input class="input is-success" type="text" placeholder="Name..." #itemname (keyup.enter)="addItem(itemname)">
+    <span class="icon is-small is-left">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="icon is-small is-right">
+      <i class="fa fa-check"></i>
+    </span>
+  </div>
+  <div class="content-item">
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link" (click)="addItem(itemname)">Add</button>
+      </div>
+    </div>
+  </div>
+</div>

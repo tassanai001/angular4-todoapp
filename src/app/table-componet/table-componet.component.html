@@ -1,0 +1,18 @@
+<app-form-componet (itemEmiter)="getListItem($event)"></app-form-componet>
+<ul *ngFor="let item of listItem">
+    <li>
+        <div class="content-item">
+            <div class="control content-item">
+                <input class="input" #itemupdate type="text" value="{{item}}">
+            </div>
+            <div class="control content-item">
+                <a class="button is-warning fa fa-cog" (click)="edit(itemupdate.value, item)"></a>
+            </div>
+            <div class="control content-item">
+                <a class="button is-danger fa fa-trash" (click)="remove(item)"></a>
+            </div>
+        </div>
+    </li>
+</ul>
+
+<span>{{listJSON}}</span>
